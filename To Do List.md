@@ -52,7 +52,7 @@
 - [ ] Armazenar até 100 vendas (circular)
 
 ### Etapa 4: Clientes
-- [ ] Criar, eliminar e alterar clientes
+- [x] Criar, eliminar e alterar clientes
 - [ ] Garantir que não há espaços vazios nas estruturas
 
 ### Etapa 5: Relatórios
