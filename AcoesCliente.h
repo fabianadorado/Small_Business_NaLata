@@ -1,5 +1,6 @@
 #pragma once
 #include "Cliente.h"
+#include <fstream>
 
 
 class AcoesCliente {
@@ -13,5 +14,7 @@ public:
     bool eliminarCliente(int id);
     bool alterarNomeCliente(int id, string novoNome);
     void listarClientes() const;
+    bool salvarParaArquivo(const string& arquivo = "clientes.txt") const;
+    bool carregarDeArquivo(const string& arquivo = "clientes.txt");
 };
 

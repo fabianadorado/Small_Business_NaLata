@@ -63,3 +63,10 @@ void AcoesCliente::listarClientes() const
 	cout << string(60, "#");
 }
 
+bool AcoesCliente::salvarParaArquivo(const string& arquivo) const
+{
+	ofstream outFile(arquivo);
+	if (!outFile.is_open())
+	return false;
+}
+
