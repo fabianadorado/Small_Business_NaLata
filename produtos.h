@@ -16,7 +16,7 @@ private:
     float precoCusto;
 
 public:
-    Produto(std::string nome, int quantidade, float precoCusto);
+    Produto(string nome, int quantidade, float precoCusto);
     int getId() const;
     string getNome() const;
     int getQuantidade() const;
