@@ -63,10 +63,41 @@ void AcoesCliente::listarClientes() const
 	cout << string(60, "#");
 }
 
-bool AcoesCliente::salvarParaArquivo(const string& arquivo) const
+bool AcoesCliente::criarCarteiraClientes(const string& carteiraClientes) const
 {
-	ofstream outFile(arquivo);
-	if (!outFile.is_open())
-	return false;
+	ofstream ficheiro(carteiraClientes);
+	if (!ficheiro.is_open())
+	{
+		cout << "Erro ao abrir o arquivo para escrita." << carteiraClientes<< endl;
+		return false;
+	}
+	for (int i = 0; i < totalClientes; i++)
+	{
+		ficheiro << vecClientes[i].toString() << endl;
+	}
+	ficheiro.close();
+	cout << "Dados salvos com sucesso no arquivo: " << carteiraClientes << endl;
+	return true;
 }
+
+bool AcoesCliente::carregarCarteiraClientes(const string& carteiraClientes)
+{
+	ifstream ficheiro(carteiraClientes);
+	if (!ficheiro.is_open())
+	{
+		cout << "Erro ao abrir o arquivo: " << ficheiro << endl;
+		return false;
+	}
+	string nome, telefone, morada;
+	while (ficheiro >> nome >> telefone >> morada)
+	{
+		criarCliente(nome, telefone, morada);
+	}
+	ficheiro.close();
+	cout << "Dados carregados com sucesso do arquivo: " << carteiraClientes << endl;
+	return true;
+
+}
+
+
 

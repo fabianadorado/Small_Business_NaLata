@@ -62,13 +62,13 @@ void Cliente::setMorada(string morada)
 
 string Cliente::toString()
 {
-	stringstream ss;
+	stringstream dadosCliente;
 
-	ss << "ID: " << idCliente
+	dadosCliente << "ID: " << idCliente
 		<< " | Nome: " << nome
 		<< " | Telefone: " << telefone
 		<< " | Morada: " << morada;
-	return ss.str();
+	return dadosCliente.str();
 
 }
 

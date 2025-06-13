@@ -14,7 +14,7 @@ public:
     bool eliminarCliente(int id);
     bool alterarNomeCliente(int id, string novoNome);
     void listarClientes() const;
-    bool salvarParaArquivo(const string& arquivo = "clientes.txt") const;
-    bool carregarDeArquivo(const string& arquivo = "clientes.txt");
+    bool criarCarteiraClientes(const string& carteiraClientes = "clientes.txt") const;
+    bool carregarCarteiraClientes(const string& carteiraClientes = "clientes.txt");
 };
 
