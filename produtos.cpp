@@ -8,23 +8,23 @@ int Produto::proximoId = 1;
 Produto::Produto(string nome, int quantidade, float precoCusto)
     : id(proximoId++), nome(nome), quantidade(quantidade), precoCusto(precoCusto) {}
 
-int Produto::getId() const 
+int Produto::getId()  
 { 
     return id; 
 }
-string Produto::getNome() const 
+string Produto::getNome()  
 { 
     return nome; 
 }
-int Produto::getQuantidade() const 
+int Produto::getQuantidade()  
 { 
     return quantidade; 
 }
-float Produto::getPrecoCusto() const 
+float Produto::getPrecoCusto()  
 { 
     return precoCusto; 
 }
-float Produto::getPrecoVenda() const 
+float Produto::getPrecoVenda()  
 { 
     return precoCusto * 1.3f; 
 }
