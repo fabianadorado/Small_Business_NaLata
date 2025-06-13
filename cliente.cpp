@@ -1,22 +1,28 @@
 #include "Cliente.h"
+#include <string>
+#include <sstream>
+using namespace std;
+
 
 int Cliente::proximoCliente = 1;
 
-// Construtor padrão
+// Construtor padrÃ£o
 Cliente::Cliente()
 {
 	idCliente = proximoCliente++;
 	nome = " ";
 	telefone = " ";
 	morada = " ";
+	totalComprado = 0;
 }
 
-Cliente::Cliente(string nome, string telefone, string morada)
+Cliente::Cliente(string nome, string telefone, string morada, float totalComprado)
 {
 	idCliente = proximoCliente++;
 	this->nome = nome;
 	this->telefone = telefone;
 	this->morada = morada;
+	this->totalComprado = totalComprado;
 }
 
 int Cliente::getIdCliente()
@@ -40,6 +46,11 @@ string Cliente::getMorada()
 	return morada;
 }
 
+float Cliente::getTotalComprado() {
+    return totalComprado;
+}
+
+
 void Cliente::setIdCliente(int idCliente)
 {
 	this->idCliente = idCliente;
@@ -59,7 +70,10 @@ void Cliente::setMorada(string morada)
 {
 	this->morada = morada;
 }
-
+void Cliente::adicionarCompra(float valor) 
+{
+    totalComprado += valor;
+}
 string Cliente::toString()
 {
 	stringstream ss;
