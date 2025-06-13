@@ -17,11 +17,11 @@ private:
 
 public:
     Produto(string nome, int quantidade, float precoCusto);
-    int getId() const;
-    string getNome() const;
-    int getQuantidade() const;
-    float getPrecoCusto() const;
-    float getPrecoVenda() const;
+    int getId();
+    string getNome();
+    int getQuantidade();
+    float getPrecoCusto();
+    float getPrecoVenda();
     void adicionarStock(int qtd);
     void removerStock(int qtd);
 };
