@@ -5,8 +5,22 @@ using namespace std;
 
 int Produto::proximoId = 1;
 
+Produto::Produto()
+
+{
+id = proximoId++;
+nome= "";
+quantidade="";
+precoCusto="";
+}
+
 Produto::Produto(string nome, int quantidade, float precoCusto)
-    : id(proximoId++), nome(nome), quantidade(quantidade), precoCusto(precoCusto) {}
+{ 
+	id = proximoId++;
+	this -> nome = nome;
+	this -> quantidade = quantidade;
+	this -> precoCusto = precoCusto;
+}
 
 int Produto::getId()  
 { 
