@@ -13,6 +13,8 @@
 #define RED "\033[31m"   // Define a cor de texto para vermelho
 #define GREEN "\033[32m" // Define a cor de texto para verde
 
+using namespace std;
+
 int main() {
     Loja loja;
     int opcao;
