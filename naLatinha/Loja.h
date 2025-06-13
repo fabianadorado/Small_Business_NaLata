@@ -4,9 +4,13 @@
 
 #include <vector>
 #include <string>
+#include <iostream>
+#include <ctime>
 #include "Produto.h"
 #include "Cliente.h"
 #include "Venda.h"
+
+using namespace std;
 
 class Loja {
 private:
@@ -22,24 +26,25 @@ public:
     Loja();
 
     // Produtos
-    void criarProduto( string& nome, int quantidade, float precoCusto);
+    void criarProduto(const string& nome, int quantidade, float precoCusto);
     void adicionarStock(int idProduto, int quantidade);
     void eliminarProduto(int idProduto);
-    void listarProdutos() ;
+    void listarProdutos() const;
 
     // Clientes
-    void criarCliente( string& nome,  string& telefone,  string& morada);
+    void criarCliente(const string& nome, const string& telefone, const string& morada);
     void eliminarCliente(int idCliente);
-    void alterarNomeCliente(int idCliente,  string& novoNome);
-	void listarClientes() const;
+    void alterarNomeCliente(int idCliente, const string& novoNome);
+    void listarClientes() const;
 
     // Vendas
     void efetuarVenda(int idCliente);
 
     // Relatórios
-    void relatorioStock() ;
-    void relatorioVendasPorProduto( string& nomeProduto) ;
-    void relatorioTotalVendas() ;
+    void relatorioStock() const;
+    void relatorioVendasPorProduto(const string& nomeProduto) const;
+    void relatorioTotalVendas() const;
 };
 
 #endif
+
