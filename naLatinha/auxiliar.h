@@ -1,15 +1,15 @@
 // Auxiliar.h
-#ifndef AUXILIAR_H
-#define AUXILIAR_H
-
+//#ifndef AUXILIAR_H
+//#define AUXILIAR_H
+#pragma once
 #include <string>
 
 int lerNumero(const std::string& mensagem);
 
-#endif
+//#endif
 
 // Auxiliar.cpp
-#include "Auxiliar.h"
+#include "auxiliar.h"
 #include <iostream>
 #include <limits>
 

@@ -1,5 +1,5 @@
 #pragma once
-#include "Cliente.h"
+#include "cliente.h"
 #include <fstream>
 
 

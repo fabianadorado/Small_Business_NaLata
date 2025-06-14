@@ -1,7 +1,7 @@
-// Produto.h
-#ifndef PRODUTO_H
-#define PRODUTO_H
-
+//// Produto.h
+//#ifndef PRODUTO_H
+//#define PRODUTO_H
+#pragma once
 #include <string>
 #include <iostream>
 using namespace std;
@@ -26,5 +26,5 @@ public:
     void removerStock(int qtd);
 };
 
-#endif
+//#endif
 

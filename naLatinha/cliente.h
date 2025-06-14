@@ -19,7 +19,7 @@ private:
 public:
 
 	Cliente();
-	Cliente( string nome,string telefone, string morada);
+	Cliente(string nome, string telefone, string morada, float totalComprado);
 	
 
 

@@ -1,4 +1,5 @@
-#include "Cliente.h"
+#include "cliente.h"
+//#include "Cliente.h"
 #include <string>
 #include <sstream>
 using namespace std;
@@ -15,6 +16,7 @@ Cliente::Cliente()
 	morada = " ";
 	totalComprado = 0;
 }
+
 
 Cliente::Cliente(string nome, string telefone, string morada, float totalComprado)
 {
