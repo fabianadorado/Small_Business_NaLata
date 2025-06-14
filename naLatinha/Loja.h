@@ -1,14 +1,14 @@
 // Loja.h
-#ifndef LOJA_H
-#define LOJA_H
-
+//#ifndef LOJA_H
+//#define LOJA_H
+#pragma once
 #include <vector>
 #include <string>
 #include <iostream>
 #include <ctime>
-#include "Produto.h"
-#include "Cliente.h"
-#include "Venda.h"
+#include "produtos.h"
+#include "cliente.h"
+#include "venda.h"
 
 using namespace std;
 
@@ -46,5 +46,5 @@ public:
     void relatorioTotalVendas() const;
 };
 
-#endif
+//#endif
 

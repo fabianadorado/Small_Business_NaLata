@@ -8,7 +8,7 @@
 #include <iostream>
 #include <limits>
 #include "Loja.h"
-#include "Auxiliar.h"
+#include "auxiliar.h"
 
 #define RESET "\033[0m"  // Define a cor de texto para padrão
 #define RED "\033[31m"   // Define a cor de texto para vermelho
@@ -41,11 +41,11 @@ int main() {
         cout << "3. Gerir Clientes\n";
         cout << "4. Relatórios\n";
         cout << "0. Sair\n";
-        opcao = validarInt("Escolha uma opção: ");
+        opcao = lerNumero("Escolha uma opção: ");
 
         switch (opcao) {
         case 1: {
-            int id = validarInt("ID do cliente: ");
+            int id = lerNumero("ID do cliente: ");
             loja.efetuarVenda(id);
             break;
         }
@@ -55,26 +55,26 @@ int main() {
             cout << "1. Criar Produto\n";
             cout << "2. Adicionar Stock\n";
             cout << "3. Eliminar Produto\n";
-            subOpcao = validarInt("Escolha uma opção: ");
+            subOpcao = lerNumero("Escolha uma opção: ");
             switch (subOpcao) {
             case 1: {
                 string nome;
                 int qtd;
                 float preco;
                 cout << "Nome: "; cin >> nome;
-                qtd = validarInt("Qtd: ");
+                qtd = lerNumero("Qtd: ");
                 cout << "Preço custo: "; cin >> preco;
                 loja.criarProduto(nome, qtd, preco);
                 break;
             }
             case 2: {
-                int id = validarInt("ID Produto: ");
-                int qtd = validarInt("Qtd a adicionar: ");
+                int id = lerNumero("ID Produto: ");
+                int qtd = lerNumero("Qtd a adicionar: ");
                 loja.adicionarStock(id, qtd);
                 break;
             }
             case 3: {
-                int id = validarInt("ID Produto: ");
+                int id = lerNumero("ID Produto: ");
                 loja.eliminarProduto(id);
                 break;
             }
@@ -90,7 +90,7 @@ int main() {
             cout << "2. Eliminar Cliente\n";
             cout << "3. Alterar Nome Cliente\n";
             cout << "4. Listar Clientes\n";
-            subOpcao = validarInt("Escolha uma opção: ");
+            subOpcao = lerNumero("Escolha uma opção: ");
             switch (subOpcao) {
             case 1: {
                 string nome, tel, morada;
@@ -104,12 +104,12 @@ int main() {
                 break;
             }
             case 2: {
-                int id = validarInt("ID Cliente: ");
+                int id = lerNumero("ID Cliente: ");
                 loja.eliminarCliente(id);
                 break;
             }
             case 3: {
-                int id = validarInt("ID Cliente: ");
+                int id = lerNumero("ID Cliente: ");
                 string novoNome;
                 cout << "Novo nome: ";
                 cin >> novoNome;
@@ -130,7 +130,7 @@ int main() {
             cout << "1. Relatório de Stock\n";
             cout << "2. Relatório de Vendas por Produto\n";
             cout << "3. Relatório Total de Vendas\n";
-            subOpcao = validarInt("Escolha uma opção: ");
+            subOpcao = lerNumero("Escolha uma opção: ");
             switch (subOpcao) {
             case 1:
                 loja.relatorioStock();

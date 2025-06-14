@@ -4,7 +4,7 @@
 #pragma once
 #include <string>
 
-int lerNumero(const std::string& mensagem);
+int lerNumero(const string& mensagem);
 
 //#endif
 
@@ -13,15 +13,15 @@ int lerNumero(const std::string& mensagem);
 #include <iostream>
 #include <limits>
 
-int lerNumero(const std::string& mensagem) {
+int lerNumero(const string& mensagem) {
     int valor;
     while (true) {
-        std::cout << mensagem;
-        std::cin >> valor;
-        if (std::cin.fail()) {
-            std::cin.clear();
-            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-            std::cout << "Entrada inválida. Digite apenas números.\n";
+        cout << mensagem;
+        cin >> valor;
+        if (cin.fail()) {
+            cin.clear();
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+            cout << "Entrada inválida. Digite apenas números.\n";
         } else {
             return valor;
         }
