@@ -7,8 +7,8 @@
 #include <sstream>   // para poder usar setprecision em strings || deixa-me usar manipulador de strings
 #include <iostream>
 #include <limits>
-//#include "Loja.h"
-//#include "Auxiliar.h"
+#include "Loja.h"
+#include "Auxiliar.h"
 
 #define RESET "\033[0m"  // Define a cor de texto para padrão
 #define RED "\033[31m"   // Define a cor de texto para vermelho
